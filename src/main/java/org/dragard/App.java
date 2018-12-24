@@ -5,6 +5,10 @@ import org.dragard.employees.Manager;
 import org.dragard.employees.Other;
 import org.dragard.employees.Worker;
 
+import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,7 +28,35 @@ public class App
 
     public static void main( String[] args )
     {
-        App app = new App();
+
+        EmployeeListXML employeeList = EmployeeListXML.INSTANCE;
+        for (Employee e :
+                employeeList.getUnmodifiableList()) {
+            System.out.println(e);
+        }
+
+        /*URL resource = App.class.getResource("/employeeList.xml");
+        File file = null;
+        try {
+            Paths.get(resource.toURI()).toFile();
+            file = Paths.get(resource.toURI()).toFile();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        try (
+                BufferedReader br = new BufferedReader(
+                        new InputStreamReader(new FileInputStream(file)))
+        ){
+
+            String s;
+            while ((s = br.readLine()) != null){
+                System.out.println(s);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+        /*App app = new App();
         for (int i = 0; i < 10; i++) {
             app.addOther();
             app.addManager();
@@ -47,12 +79,12 @@ public class App
         for (Employee e :
                 app.employees) {
             System.out.println(e);
-        };
+        }*/
 
 
     }
 
-    private Worker randomWorker(){
+/*    private Worker randomWorker(){
         String name = maleNames[(int) (Math.random() * 3)];
         String surname = maleSurnames[(int) (Math.random() * 3)];
         String patronymic = malePatronymic[(int) (Math.random() * 3)];
@@ -74,5 +106,5 @@ public class App
         Worker tempWorker = randomWorker();
         employees.add(new Other(tempWorker.getName(), tempWorker.getSurname(), tempWorker.getPatronymic(),
                 tempWorker.getDateOfEmployment(), "Description " + (int)(Math.random() * 10)));
-    }
+    }*/
 }

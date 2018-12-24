@@ -6,8 +6,8 @@ public class Other extends Employee{
 
     private final String Description;
 
-    public Other(String name, String surname, String patronimic, Date dateOfEmployment, String description) {
-        super(name, surname, patronimic, dateOfEmployment);
+    public Other(long id, String name, String surname, String patronymic, Date dateOfEmployment, String description) {
+        super(id, name, surname, patronymic, Position.OTHER, dateOfEmployment);
         Description = description;
     }
 

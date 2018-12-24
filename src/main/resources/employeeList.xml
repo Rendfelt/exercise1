@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <id>1</id>
+        <name>Bill</name>
+        <surname>Murrey</surname>
+        <patronymic>Potapovich</patronymic>
+        <position>WORKER</position>
+        <dateOfEmployment>31/12/1998</dateOfEmployment>
+    </employee>
+    <employee>
+        <id>3</id>
+        <name>Bill3</name>
+        <surname>Murrey3</surname>
+        <patronymic>Potapovich3</patronymic>
+        <position>WORKER</position>
+        <dateOfEmployment>31/12/1995</dateOfEmployment>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>Mill</name>
+        <surname>Burrey</surname>
+        <patronymic>Sergeevich</patronymic>
+        <position>MANAGER</position>
+        <dateOfEmployment>31/11/1998</dateOfEmployment>
+        <subordinates>
+            <id>1</id>
+        </subordinates>
+    </employee>
+    <employee>
+        <id>5</id>
+        <name>Kill</name>
+        <surname>Zurrey</surname>
+        <patronymic>Rotapovich</patronymic>
+        <position>OTHER</position>
+        <dateOfEmployment>15/12/1998</dateOfEmployment>
+        <description>Some description</description>
+    </employee>
+</employees>
+

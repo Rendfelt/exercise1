@@ -8,13 +8,13 @@ public class Manager extends Employee {
 
     private final List<Worker> subordinates;
 
-    public Manager(String name, String surname, String patronimic, Date dateOfEmployment) {
-        super(name, surname, patronimic, dateOfEmployment);
+    public Manager(long id, String name, String surname, String patronymic, Date dateOfEmployment) {
+        super(id, name, surname, patronymic, Position.MANAGER, dateOfEmployment);
         subordinates = new ArrayList<>();
     }
 
-    public Manager(String name, String surname, String patronimic, Date dateOfEmployment, List<Worker> subordinates) {
-        super(name, surname, patronimic, dateOfEmployment);
+    public Manager(long id, String name, String surname, String patronimic, Date dateOfEmployment, List<Worker> subordinates) {
+        super(id, name, surname, patronimic, Position.MANAGER, dateOfEmployment);
         this.subordinates = subordinates;
     }
 

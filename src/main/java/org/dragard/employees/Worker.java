@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Worker extends Employee {
 
-    public Worker(String name, String surname, String patronimic, Date dateOfEmployment) {
-        super(name, surname, patronimic, dateOfEmployment);
+    public Worker(long id, String name, String surname, String patronymic, Date dateOfEmployment) {
+        super(id, name, surname, patronymic, Position.WORKER, dateOfEmployment);
     }
 
     @Override
